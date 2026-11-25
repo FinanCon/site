@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { WhatsAppIcon } from './Navbar';
 
-type TabId = 'diag' | 'fr' | 'pj' | 'rpa';
+type TabId = 'diag' | 'fr' | 'pj';
 
 interface DiagQuestion {
   k: string;
@@ -213,10 +213,6 @@ export const DiagnosticCalculator: React.FC = () => {
   const [pjSalInput, setPjSalInput] = useState<string>('');
   const [pjFatInput, setPjFatInput] = useState<string>('');
   const [pjHonInput, setPjHonInput] = useState<string>('');
-
-  /* Estado 4: RPA */
-  const [rpaValorInput, setRpaValorInput] = useState<string>('');
-  const [rpaIssInput, setRpaIssInput] = useState<string>('');
 
   /* Helpers do Diagnóstico */
   const isQuestionVisible = (idx: number, ans: Record<string, number | number[]>) => {
@@ -487,29 +483,6 @@ export const DiagnosticCalculator: React.FC = () => {
     };
   }, [pjSalInput, pjFatInput, pjHonInput]);
 
-  /* Cálculo RPA */
-  const rpaResult = useMemo(() => {
-    const V = parseNum(rpaValorInput);
-    const iss = parseNum(rpaIssInput) || 0;
-    if (!(V > 0)) return { status: 'empty' as const };
-
-    const inss = Math.min(V, TETO) * 0.11;
-    const ir = calcIrrf(V, inss);
-    const vIss = (V * iss) / 100;
-    const liq = V - inss - ir - vIss;
-
-    return {
-      status: 'ready' as const,
-      V,
-      iss,
-      inss,
-      ir,
-      vIss,
-      liq,
-      inssPatronal: V * 0.2,
-    };
-  }, [rpaValorInput, rpaIssInput]);
-
   const currentQuestion = QUESTIONS[step];
 
   return (
@@ -541,7 +514,6 @@ export const DiagnosticCalculator: React.FC = () => {
             { id: 'diag' as TabId, label: 'Diagnóstico da empresa' },
             { id: 'fr' as TabId, label: 'Fator R' },
             { id: 'pj' as TabId, label: 'PJ ou CLT' },
-            { id: 'rpa' as TabId, label: 'RPA' },
           ].map((tab) => {
             const isSelected = activeTab === tab.id;
             return (
@@ -963,104 +935,6 @@ export const DiagnosticCalculator: React.FC = () => {
                       <WhatsAppIcon className="w-5 h-5" />
                       <span>Conversar sobre abrir PJ</span>
                     </a>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Painel 4: RPA */}
-        {activeTab === 'rpa' && (
-          <div className="pt-9">
-            <p className="text-[#4A5A66] max-w-[70ch] text-[18px]">
-              Calcule os descontos de um Recibo de Pagamento Autônomo e o valor líquido que o profissional recebe.
-            </p>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-7 items-start">
-              <form className="grid gap-5" onSubmit={(e) => e.preventDefault()}>
-                <label className="grid gap-2 font-semibold text-[16px] text-[#141E37]">
-                  Valor bruto do serviço
-                  <span className="flex items-center border-[1.5px] border-[#E2E0D8] focus-within:border-[#3280C2] rounded-[14px] bg-[#F5F3EE] px-4 transition-colors">
-                    <i className="not-italic text-[#4A5A66] font-medium">R$</i>
-                    <input
-                      type="text"
-                      inputMode="decimal"
-                      placeholder="3.000,00"
-                      value={rpaValorInput}
-                      onChange={(e) => setRpaValorInput(e.target.value)}
-                      className="flex-1 min-w-0 bg-transparent border-0 font-medium text-[20px] text-[#141E37] py-3.5 px-2.5 outline-none tabular-nums"
-                    />
-                  </span>
-                </label>
-
-                <label className="grid gap-2 font-semibold text-[16px] text-[#141E37]">
-                  ISS retido
-                  <small className="font-normal text-[#4A5A66] text-[14px] -mt-1">
-                    Opcional, conforme o município
-                  </small>
-                  <span className="flex items-center border-[1.5px] border-[#E2E0D8] focus-within:border-[#3280C2] rounded-[14px] bg-[#F5F3EE] px-4 transition-colors">
-                    <input
-                      type="text"
-                      inputMode="decimal"
-                      placeholder="0"
-                      value={rpaIssInput}
-                      onChange={(e) => setRpaIssInput(e.target.value)}
-                      className="flex-1 min-w-0 bg-transparent border-0 font-medium text-[20px] text-[#141E37] py-3.5 px-1 outline-none tabular-nums"
-                    />
-                    <i className="not-italic text-[#4A5A66] font-medium">%</i>
-                  </span>
-                </label>
-              </form>
-
-              <div
-                aria-live="polite"
-                className="bg-[#141E37] text-[#F5F3EE] rounded-[24px] p-7 sm:p-9 min-h-full"
-              >
-                {rpaResult.status === 'empty' && (
-                  <p className="text-[#C9D6DF] text-[17px]">
-                    Informe o valor bruto do serviço.
-                  </p>
-                )}
-
-                {rpaResult.status === 'ready' && (
-                  <div>
-                    <div>
-                      <span className="block text-[14px] text-[#C9D6DF]">
-                        Valor líquido para o profissional
-                      </span>
-                      <strong className="font-display font-bold text-[48px] sm:text-[58px] leading-none block mt-1.5 tabular-nums">
-                        {brl.format(rpaResult.liq)}
-                      </strong>
-                    </div>
-
-                    <dl className="mt-6 divide-y divide-[#F5F3EE]/15 text-[16px] tabular-nums">
-                      <div className="flex justify-between gap-4 py-2.5">
-                        <dt className="text-[#C9D6DF]">Valor bruto</dt>
-                        <dd className="font-semibold">{brl.format(rpaResult.V)}</dd>
-                      </div>
-                      <div className="flex justify-between gap-4 py-2.5">
-                        <dt className="text-[#C9D6DF]">INSS (11%)</dt>
-                        <dd className="font-semibold">− {brl.format(rpaResult.inss)}</dd>
-                      </div>
-                      <div className="flex justify-between gap-4 py-2.5">
-                        <dt className="text-[#C9D6DF]">Imposto de Renda</dt>
-                        <dd className="font-semibold">− {brl.format(rpaResult.ir)}</dd>
-                      </div>
-                      {rpaResult.vIss > 0 && (
-                        <div className="flex justify-between gap-4 py-2.5">
-                          <dt className="text-[#C9D6DF]">
-                            ISS ({rpaResult.iss.toLocaleString('pt-BR')}%)
-                          </dt>
-                          <dd className="font-semibold">− {brl.format(rpaResult.vIss)}</dd>
-                        </div>
-                      )}
-                    </dl>
-
-                    <p className="mt-6 text-[#C9D6DF] text-[16px]">
-                      Para a empresa contratante fora do Simples Nacional (ou no Anexo IV), há ainda{' '}
-                      <b className="text-[#F5F3EE]">{brl.format(rpaResult.inssPatronal)}</b> de INSS patronal (20%). Pagamentos frequentes ao mesmo profissional podem caracterizar vínculo: fale com a gente antes de usar o RPA como rotina.
-                    </p>
                   </div>
                 )}
               </div>

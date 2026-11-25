@@ -102,7 +102,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, initialTab, onCl
                 1. Como funcionam os simuladores deste site
               </h3>
               <p>
-                As informações inseridas nas ferramentas gratuitas deste site (<strong className="text-[#141E37]">Diagnóstico da empresa, Calculadora de Fator R, Comparador PJ ou CLT e Calculadora de RPA</strong>) são processadas <strong className="text-[#141E37]">100% localmente no seu próprio navegador</strong>. Nenhum valor financeiro ou resposta do diagnóstico é gravado em banco de dados ou enviado aos nossos servidores sem a sua ação explícita.
+                As informações inseridas nas ferramentas gratuitas deste site (<strong className="text-[#141E37]">Diagnóstico da empresa, Calculadora de Fator R e Comparador PJ ou CLT</strong>) são processadas <strong className="text-[#141E37]">100% localmente no seu próprio navegador</strong>. Nenhum valor financeiro ou resposta do diagnóstico é gravado em banco de dados ou enviado aos nossos servidores sem a sua ação explícita.
               </p>
 
               <h3 className="font-display font-bold text-[19px] text-[#141E37] pt-2">
@@ -179,7 +179,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, initialTab, onCl
                 1. Caráter Orientativo das Calculadoras e Guias
               </h3>
               <p>
-                As ferramentas gratuitas disponíveis neste site (<strong className="text-[#141E37]">Diagnóstico da empresa, Fator R, PJ ou CLT e RPA</strong>) utilizam as tabelas tributárias de 2026 — incluindo Simples Nacional (LC 123/2006), faixas de INSS e IRRF com a redução da Lei 15.270/2025.
+                As ferramentas gratuitas disponíveis neste site (<strong className="text-[#141E37]">Diagnóstico da empresa, Fator R e PJ ou CLT</strong>) utilizam as tabelas tributárias de 2026 — incluindo Simples Nacional (LC 123/2006), faixas de INSS e IRRF com a redução da Lei 15.270/2025.
               </p>
               <p>
                 Os valores apresentados constituem <strong className="text-[#141E37]">estimativas preliminares de apoio à decisão</strong> e não substituem a análise contábil individualizada, pois não contemplam particularidades como dependentes de IR, ISS fixo municipal, sublimites estaduais, equiparação hospitalar ou retenções específicas da atividade.

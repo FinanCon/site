@@ -12,10 +12,10 @@ export const AboutUsSection: React.FC = () => {
         '22 anos no Grupo Paschoalotto, na área financeira, e 5 anos na área financeira do Hospital Prontocor.',
     },
     {
-      name: 'Michelle Rossini Crepaldi Pitarelli',
+      name: 'Michelle Rossini Crepaldi',
       role: 'Sócia · Contadora (CAO · CRC 1SP337666/O-0)',
       image: '/michelle-rossini.jpg',
-      imageAlt: 'Michelle Rossini Crepaldi Pitarelli — Sócia e Contadora da Finan.Con',
+      imageAlt: 'Michelle Rossini Crepaldi — Sócia e Contadora da Finan.Con',
       education:
         'Ciências Contábeis, MBA em Controladoria e MBA em Contabilidade, Compliance e Direito Tributário.',
       experience: '12 anos no Grupo Paschoalotto, na área contábil e tributária.',

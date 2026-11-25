@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --marinho: #141E37;
+  --petroleo: #073950;
+  --azul-profundo: #284591;
+  --azul: #3280C2;
+  --ciano: #7FD0E8;
+  --ciano-claro: #7FD0E8;
+  --ambar: #F0B44C;
+  --offwhite: #F5F3EE;
+  --branco: #FFFFFF;
+  --texto-secundario: #4A5A66;
+  --texto-sobre-escuro: #C9D6DF;
+  --linha: #E2E0D8;
+  --bg: #F5F3EE;
+  --surface: #FFFFFF;
+  --ink: #141E37;
+  --muted: #4A5A66;
+  --line: #E2E0D8;
+  --link: #284591;
+  --on-dark: #F5F3EE;
+  --on-dark-muted: #C9D6DF;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-48: 48px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --font-display: "Space Grotesk", Arial, sans-serif;
+  --font-texto: "Inter", Arial, sans-serif;
+  --display: "Space Grotesk", "Segoe UI", Arial, sans-serif;
+  --text: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 84px;
+  }
+
+  body {
+    font-family: var(--text);
+    background-color: var(--bg);
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--display);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--ambar);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@keyframes riseMark {
+  from {
+    clip-path: inset(100% 0 0 0);
+    transform: translateY(30px);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    transform: none;
+  }
+}
+
+.animate-rise-mark {
+  animation: riseMark 1.4s cubic-bezier(0.2, 0.7, 0.1, 1) both 0.15s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise-mark {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Tabular numbers for financial calculators */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

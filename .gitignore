@@ -1,0 +1,27 @@
+# Dependências
+node_modules/
+.pnp
+.pnp.js
+
+# Build & Logs
+dist/
+build/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ambiente e IDE
+.env
+.env.local
+.DS_Store
+*.local
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Arquivos de briefing local e pacotes ZIP
+dados para o novo site/
+*.zip
+330053908_2108138312711057_6910609900111702409_n.jpg
+

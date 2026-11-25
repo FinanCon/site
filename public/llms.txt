@@ -1,0 +1,52 @@
+# Finan.Con Soluções Empresariais
+
+> Contabilidade especializada na área da saúde, BPO financeiro, auditoria para condomínios e proteção patrimonial em Bauru/SP. Propósito: Direcionar para transformar.
+
+A **Finan.Con Soluções Empresariais Ltda** (CNPJ 44.541.903/0001-55) é um escritório de contabilidade consultiva, gestão financeira terceirizada (BPO Financeiro), auditoria condominial e proteção patrimonial sediado em Bauru/SP, com atendimento presencial e digital (via Sistema Domínio e plataforma Onvio) para todo o Brasil.
+
+## Dados Institucionais e Localização
+
+- **Razão Social:** Finan.Con Soluções Empresariais Ltda
+- **CNPJ:** 44.541.903/0001-55
+- **Propósito:** Direcionar para transformar (Organizar, Direcionar e Transformar)
+- **Missão:** Direcionar empreendedores através de uma equipe especialista e acolhedora, assegurando seus resultados com clareza.
+- **Endereço:** Av. Getúlio Vargas, 22-25, Torre 2, sala 102 · Bauru/SP, CEP 17017-383
+- **WhatsApp / Telefone:** +55 (14) 99772-1309 (https://wa.me/5514997721309)
+- **E-mail:** contato@financon.com.br
+- **Instagram:** https://www.instagram.com/finan.con_/
+- **Website Oficial:** https://financon.com.br/
+
+## Liderança Executiva
+
+- **Fernanda Ruiz Mussato** — Sócia · Diretora Financeira (CFO): Administração de Empresas e MBA em Gestão Empresarial. 22 anos de atuação no Grupo Paschoalotto na área financeira e 5 anos na área financeira do Hospital Prontocor.
+- **Michelle Rossini Crepaldi Pitarelli** — Sócia · Contadora (CAO · CRC 1SP337666/O-0): Ciências Contábeis, MBA em Controladoria e MBA em Contabilidade, Compliance e Direito Tributário. 12 anos de atuação no Grupo Paschoalotto na área contábil e tributária.
+
+## Frentes de Atuação (Serviços)
+
+1. **Contabilidade e Fiscal (Especialistas na Área da Saúde):**
+   - Especialidade em médicos, dentistas, psicólogos, fisioterapeutas, clínicas e prestadores de serviços.
+   - Abertura, alteração e encerramento de empresas (PJ Médica e sociedades).
+   - Planejamento tributário e enquadramento no Fator R (Simples Nacional Anexo III a partir de 6% vs. Anexo V).
+   - Escrita fiscal, gestão de tributos, obrigações acessórias, departamento pessoal, gestão societária e controladoria.
+2. **BPO Financeiro (Para Pequenas e Médias Empresas):**
+   - Terceirização da rotina financeira: Implantação, Controle Diário e Relatórios.
+   - Gestão de contas a pagar e a receber, emissão de notas fiscais (NFS-e / NF-e) e boletos, conciliação bancária e de caixa, fluxo de caixa e acompanhamento de métricas.
+3. **Auditoria para Condomínios:**
+   - Auditoria independente para síndicos, conselhos fiscais e administradoras (troca de síndico, prestação de contas ou rotina anual).
+   - Conferência de receitas, inadimplência, despesas, contratos, folha, retenções tributárias e fundo de reserva.
+4. **Proteção e Patrimônio (em parceria com a DAMP Seguros):**
+   - Visão integrada de CNPJ e CPF: Seguro de vida individual e coletivo, planejamento de sucessão e inventário, consórcios e reestruturação de dívidas.
+5. **Contabilidade Digital e Soluções Extras:**
+   - Operação digital via Sistema Domínio e portal Onvio.
+   - Emissão de Certificado Digital (e-CNPJ e e-CPF, modelos A1 e A3) e Emissor de Notas Fiscais integrado.
+
+## Ferramentas Gratuitas no Site
+
+- [Diagnóstico da Empresa](https://financon.com.br/#ferramentas): Questionário interativo em 7 etapas para identificar oportunidades tributárias, Fator R, regularização de MEI e controle financeiro.
+- [Calculadora de Fator R 2026](https://financon.com.br/#ferramentas): Simulação da razão folha/receita de 12 meses (limite de 28%) comparando Anexo III e Anexo V do Simples Nacional.
+- [Comparador PJ x CLT 2026](https://financon.com.br/#ferramentas): Comparativo anual líquido entre contratação CLT e empresa PJ no Simples Nacional com tabelas de 2026 (LC 123/2006 e Lei 15.270/2025).
+- [Calculadora de RPA](https://financon.com.br/#ferramentas): Cálculo líquido de Recibo de Pagamento Autônomo (INSS, IRRF, ISS e encargo patronal de 20%).
+
+## Documentação Completa para IA
+
+- [Contexto Institucional e Técnico Completo (llms-full.txt)](https://financon.com.br/llms-full.txt)

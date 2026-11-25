@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Motores de Busca e Inteligência Artificial (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://financon.com.br/sitemap.xml
+# LLMs Context: https://financon.com.br/llms.txt
+# LLMs Full Context: https://financon.com.br/llms-full.txt

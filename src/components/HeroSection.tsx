@@ -52,7 +52,10 @@ export const HeroSection: React.FC = () => {
               src="/hero-mark.svg"
               alt=""
               aria-hidden="true"
-              className="w-full max-w-[180px] sm:max-w-[240px] lg:max-w-[380px] h-auto animate-rise-mark select-none"
+              width={380}
+              height={476}
+              fetchPriority="high"
+              className="w-[180px] sm:w-[240px] lg:w-[380px] aspect-[94.4/118.2] h-auto animate-rise-mark select-none"
             />
           </div>
         </div>

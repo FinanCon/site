@@ -14,7 +14,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             <img
               src="/logo-financon.svg"
               alt="Finan.Con Soluções Empresariais"
-              className="h-9 w-auto"
+              width={102}
+              height={36}
+              className="h-9 w-[102px]"
             />
           </a>
 

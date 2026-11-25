@@ -142,7 +142,10 @@ export const CTASection: React.FC = () => {
               <img
                 src="/escritorio-financon.jpg"
                 alt="Escritório da Finan.Con Soluções Empresariais na Av. Getúlio Vargas em Bauru/SP"
+                width={1200}
+                height={900}
                 loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>

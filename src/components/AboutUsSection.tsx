@@ -70,7 +70,10 @@ export const AboutUsSection: React.FC = () => {
                 <img
                   src={person.image}
                   alt={person.imageAlt}
+                  width={800}
+                  height={860}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-top"
                 />
               </div>

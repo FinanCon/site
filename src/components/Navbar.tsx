@@ -42,7 +42,9 @@ export const Navbar: React.FC = () => {
           <img
             src="/logo-financon.svg"
             alt="Finan.Con Soluções Empresariais"
-            className="h-10 w-auto"
+            width={114}
+            height={40}
+            className="h-10 w-[114px]"
           />
         </a>
 

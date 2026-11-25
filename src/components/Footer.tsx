@@ -3,14 +3,24 @@ import { LegalTab } from './LegalModal';
 
 interface FooterProps {
   onOpenLegal: (tab: LegalTab) => void;
+  onNavigate?: (path: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onNavigate }) => {
   return (
     <footer className="bg-[#141E37] text-[#C9D6DF] py-12 text-[14px] border-t border-white/[0.06]">
       <div className="max-w-[1160px] mx-auto px-6 sm:px-7">
         <div className="flex flex-wrap gap-6 justify-between items-center pb-8 border-b border-white/[0.08]">
-          <a href="#inicio" aria-label="Finan.Con, voltar ao topo">
+          <a
+            href="/"
+            onClick={(e) => {
+              if (onNavigate) {
+                e.preventDefault();
+                onNavigate('/');
+              }
+            }}
+            aria-label="Finan.Con, voltar ao topo"
+          >
             <img
               src="/logo-financon.svg"
               alt="Finan.Con Soluções Empresariais"
@@ -37,6 +47,19 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
+            <a
+              href="/conteudos"
+              onClick={(e) => {
+                if (onNavigate) {
+                  e.preventDefault();
+                  onNavigate('/conteudos');
+                }
+              }}
+              className="hover:text-[#F5F3EE] underline underline-offset-4 transition-colors"
+            >
+              Blog & Notícias
+            </a>
+            <span aria-hidden="true" className="text-white/20">·</span>
             <button
               type="button"
               onClick={() => onOpenLegal('privacidade')}

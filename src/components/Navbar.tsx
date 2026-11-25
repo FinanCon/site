@@ -16,26 +16,40 @@ export const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = 'w-
   </svg>
 );
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  onNavigate?: (path: string) => void;
+  currentPath?: string;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPath = '/' }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const whatsappUrl =
     'https://wa.me/5514997721309?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Finan.Con.';
 
   const navLinks = [
-    { href: '#proposito', label: 'Propósito' },
-    { href: '#servicos', label: 'Serviços' },
-    { href: '#ferramentas', label: 'Ferramentas' },
-    { href: '#guias', label: 'Guias' },
-    { href: '#quem-somos', label: 'Quem somos' },
-    { href: '#contato', label: 'Contato' },
+    { href: '/#proposito', label: 'Propósito' },
+    { href: '/#servicos', label: 'Serviços' },
+    { href: '/#ferramentas', label: 'Ferramentas' },
+    { href: '/conteudos', label: 'Conteúdos' },
+    { href: '/#quem-somos', label: 'Quem somos' },
+    { href: '/#contato', label: 'Contato' },
   ];
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (onNavigate) {
+      e.preventDefault();
+      onNavigate(href);
+    }
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-40 bg-[#141E37] border-b border-white/[0.07]">
       <div className="max-w-[1160px] mx-auto px-6 sm:px-7 h-[76px] flex items-center justify-between gap-5">
         <a
-          href="#inicio"
+          href="/"
+          onClick={(e) => handleLinkClick(e, '/')}
           aria-label="Finan.Con, início"
           className="inline-flex items-center shrink-0 py-1"
         >
@@ -50,15 +64,25 @@ export const Navbar: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-7" aria-label="Principal">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-[#C9D6DF] hover:text-[#F5F3EE] text-[15.5px] font-medium transition-colors duration-150"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive =
+              link.href === '/conteudos' &&
+              (currentPath.startsWith('/conteudos') || currentPath.startsWith('/blog'));
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
+                className={`text-[15.5px] font-medium transition-colors duration-150 ${
+                  isActive
+                    ? 'text-[#F0B44C]'
+                    : 'text-[#C9D6DF] hover:text-[#F5F3EE]'
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
           <a
             href={whatsappUrl}
             target="_blank"
@@ -101,7 +125,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleLinkClick(e, link.href)}
                 className="text-[#F5F3EE] hover:text-[#F0B44C] text-lg font-medium py-1 border-b border-white/[0.06]"
               >
                 {link.label}

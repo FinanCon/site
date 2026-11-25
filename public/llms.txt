@@ -46,6 +46,10 @@ A **Finan.Con Soluções Empresariais Ltda** (CNPJ 44.541.903/0001-55) é um esc
 - [Calculadora de Fator R 2026](https://financon.com.br/#ferramentas): Simulação da razão folha/receita de 12 meses (limite de 28%) comparando Anexo III e Anexo V do Simples Nacional.
 - [Comparador PJ x CLT 2026](https://financon.com.br/#ferramentas): Comparativo anual líquido entre contratação CLT e empresa PJ no Simples Nacional com tabelas de 2026 (LC 123/2006 e Lei 15.270/2025).
 
+## Conteúdos e Notícias
+
+- [Blog & Notícias Finan.Con](https://financon.com.br/conteudos): Artigos e atualizações sobre Fator R, Reforma Tributária, BPO Financeiro e gestão empresarial sem "contabilês".
+
 ## Documentação Completa para IA
 
 - [Contexto Institucional e Técnico Completo (llms-full.txt)](https://financon.com.br/llms-full.txt)
